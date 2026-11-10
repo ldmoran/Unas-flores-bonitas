@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#3b2a5c">
+<title>Para Rafita 🌸</title>
+<meta property="og:title" content="Para Rafita 🌸">
+<meta property="og:description" content="Un rinconcito lleno de flores, solo para ti.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="garden" aria-hidden="true"></canvas>
+
+<!-- Pantalla de entrada (necesaria para que el celular deje reproducir la música) -->
+<section id="intro">
+  <div class="intro-box">
+    <div class="emoji">🌷</div>
+    <h1>Rafita</h1>
+    <p>Hice algo para ti</p>
+    <button id="enter" class="btn">Toca para entrar 🌸</button>
+  </div>
+</section>
+
+<main id="ui" hidden>
+  <h2 class="title">Rafita</h2>
+  <p class="sub">me llamas la atención 🌼</p>
+  <button id="openLetter" class="btn">Una cartita 💌</button>
+  <button id="openUniverse" class="btn alt">Un universo ✨</button>
+  <p class="hint">toca la pantalla para plantar flores</p>
+</main>
+
+<button id="music" class="music" hidden aria-label="Música">🔇</button>
+<a id="ytfallback" class="fallback" hidden target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=nYrEL9ecAWA">▶ Escuchar la canción</a>
+<div id="yt-wrap"><div id="yt"></div></div>
+
+<section id="universe" hidden>
+  <canvas id="ucv" aria-hidden="true"></canvas>
+  <button id="uBack" class="uback">← Volver al jardín</button>
+</section>
+
+<section id="letter" hidden>
+  <article class="paper" role="dialog" aria-label="Carta">
+    <h3>Hola, Rafita 🌸</h3>
+    <p>Sí, esto es medio loco: casi no nos conocemos. Ni siquiera hemos hablado mucho. Pero me llamas la atención, y no quise quedarme con las ganas de decírtelo.</p>
+    <p>Así que hice esto yo mismo, para ti. Un rinconcito lleno de flores, porque sentí que te quedaban.</p>
+    <p>No te pido nada. Si te sacó una sonrisa, ya valió la pena. Y si te da curiosidad, a mí me encantaría conocerte un poquito más.</p>
+    <p>Hay infinitas formas de conocernos, y si alguna te gusta, estaré esperando tener esa oportunidad de conocerte 🌸</p>
+    <p class="sign">Con cariño,<br>David 🌷</p>
+    <button id="closeLetter" class="btn small">Cerrar</button>
+  </article>
+</section>
+
+<script src="app.js"></script>
+<script src="universe.js"></script>
+</body>
+</html>
